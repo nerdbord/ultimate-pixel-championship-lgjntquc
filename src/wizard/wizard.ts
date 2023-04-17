@@ -1,6 +1,6 @@
-import { chooseFighterStep } from './steps/choose-fighter-step/choose-fighter-step';
-import { bookingDetailsStep } from './steps/booking-details-step/booking-details-step';
-import { bookingConfirmationStep } from './steps/booking-confirmation-step/booking-confirmation-step';
+import { chooseFighterStep } from './steps/choose-fighter-step/choose-fighter-step.js';
+import { bookingDetailsStep } from './steps/booking-details-step/booking-details-step.js';
+import { bookingConfirmationStep } from './steps/booking-confirmation-step/booking-confirmation-step.js';
 
 export const initWizard = () => {
    // I keep steps in the array, so Im able to navigate through

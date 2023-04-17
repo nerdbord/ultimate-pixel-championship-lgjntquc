@@ -1,5 +1,5 @@
-import { welcomeScreen } from './screens/welcome-screen';
-import { wizardScreen } from './screens/wizard-screen';
+import { welcomeScreen } from './screens/welcome-screen.js';
+import { wizardScreen } from './screens/wizard-screen.js';
 
 document.addEventListener('DOMContentLoaded', () => {
    console.log('ts file');
