@@ -1,6 +1,7 @@
 @import '/src/screens/welcome-screen/welcome-screen.css';
 @import '/src/components/buttons/button-primary/button-primary.css';
 @import '/src/components/borders/border-bottom/boder-bottom.css';
+@import '/src/components/borders/border-top/border-top.css';
 
 * {
     margin: 0;

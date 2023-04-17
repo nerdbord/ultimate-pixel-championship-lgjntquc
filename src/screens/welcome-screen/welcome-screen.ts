@@ -1,12 +1,12 @@
 import { createButtonPrimary } from '../../components/buttons/button-primary/button-primary.js';
 import { createBorderBottom } from '../../components/borders/border-bottom/boder-bottom.js';
+import { createBorderTop } from '../../components/borders/border-top/border-top.js';
 
 export const welcomeScreen = (): HTMLDivElement => {
    const welcomeScreenWrapper: HTMLDivElement = document.createElement('div');
    welcomeScreenWrapper.classList.add('welcome-wrapper');
 
-   const borderTop: HTMLDivElement = document.createElement('div');
-   borderTop.classList.add('welcome-border-top');
+   const borderTop: HTMLDivElement = createBorderTop();
 
    const welcomeTitle: HTMLHeadingElement = document.createElement('h1');
    welcomeTitle.classList.add('welcome-title');
