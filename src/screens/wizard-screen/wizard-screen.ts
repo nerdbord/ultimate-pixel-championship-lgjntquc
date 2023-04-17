@@ -1,4 +1,4 @@
-import { initWizard } from '../wizard/wizard.js';
+import { initWizard } from '../../wizard/wizard.js';
 
 export const wizardScreen = () => {
    const wizardScreenWrapper = document.createElement('div');
