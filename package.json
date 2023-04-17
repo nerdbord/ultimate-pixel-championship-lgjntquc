@@ -5,8 +5,9 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "prepare": "husky install",
-    "start": "tsc -w"
+    "start": "tsc --watch",
+    "prepare": "husky install"
+
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

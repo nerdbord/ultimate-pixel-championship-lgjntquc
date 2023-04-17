@@ -1,10 +1,12 @@
-// import { welcomeScreen } from "../js/screens/welcome-screen.js";
-// import { wizardScreen } from "../js/screens/wizard-screen.js";
+import { welcomeScreen } from './screens/welcome-screen';
+import { wizardScreen } from './screens/wizard-screen';
 
 document.addEventListener('DOMContentLoaded', () => {
-   // const app = document.querySelector('#app');
-   // const displayWelcomeScreen = welcomeScreen();
-   // const displayWizardScreen = wizardScreen();
+   console.log('ts file');
+
+   const app = document.querySelector('#app');
+   const displayWelcomeScreen = welcomeScreen();
+   const displayWizardScreen = wizardScreen();
    // Display welcome screen
    // app.append(displayWelcomeScreen);
    // Display wizard screen

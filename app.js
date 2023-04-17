@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    // Display welcome screen
    app.append(displayWelcomeScreen);
+   console.log('oryginal');
 
    // Display wizard screen
    // app.append(displayWizardScreen);
