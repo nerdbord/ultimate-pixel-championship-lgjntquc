@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const displayWelcomeScreen = welcomeScreen();
       const displayWizardScreen = wizardScreen();
       // Display welcome screen
-      app.append(displayWelcomeScreen);
+      // app.append(displayWelcomeScreen);
       // Display wizard screen
-      // app.append(displayWizardScreen);
+      app.append(displayWizardScreen);
    }
 });
