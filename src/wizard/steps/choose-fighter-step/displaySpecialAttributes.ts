@@ -1,5 +1,5 @@
 // Creating elements to display fighter's special attributes
-export const specialAttributes = (): HTMLDivElement => {
+export const specialAttributes = (specialAttack: string, weakness: string): HTMLDivElement => {
    const displaySpecialAttributes: HTMLDivElement = document.createElement('div');
    displaySpecialAttributes.classList.add('wizard-attributes-wrapper');
 

@@ -1,5 +1,5 @@
 //Creating elements to display Health and Attack
-export const fightPoints = (): HTMLDivElement => {
+export const fightPoints = (health: number, attack: string): HTMLDivElement => {
    const displayFightPoints: HTMLDivElement = document.createElement('div');
    displayFightPoints.classList.add('wizard-points-wrapper');
 
@@ -10,7 +10,7 @@ export const fightPoints = (): HTMLDivElement => {
    dataHealthLabel.innerText = 'HEALTH';
    const dataHealthValue: HTMLSpanElement = document.createElement('span');
    dataHealthValue.classList.add('wizard-points-value');
-   dataHealthValue.innerText = '67';
+   dataHealthValue.innerText = health.toString();
    dataHealthWrapper.append(dataHealthLabel, dataHealthValue);
 
    const dataAttackWrapper: HTMLDivElement = document.createElement('div');
@@ -20,7 +20,7 @@ export const fightPoints = (): HTMLDivElement => {
    dataAttackLabel.innerText = 'ATTACK';
    const dataAttackValue: HTMLSpanElement = document.createElement('span');
    dataAttackValue.classList.add('wizard-points-value');
-   dataAttackValue.innerText = '14 - 18';
+   dataAttackValue.innerText = attack;
    dataAttackWrapper.append(dataAttackLabel, dataAttackValue);
 
    displayFightPoints.append(dataHealthWrapper, dataAttackWrapper);
