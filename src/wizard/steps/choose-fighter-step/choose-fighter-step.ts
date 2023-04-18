@@ -1,6 +1,7 @@
 import { createFighter } from './createFighter.js';
 import { fightPoints } from './displayFightPoints.js';
 import { specialAttributes } from './displaySpecialAttributes.js';
+import { createButtonPrimary } from '../../../components/buttons/button-primary/button-primary.js';
 
 // Creating container for choose-fighter-step
 export const chooseFighterStep = (): HTMLDivElement => {
@@ -25,12 +26,16 @@ export const chooseFighterStep = (): HTMLDivElement => {
    // Creating elements to display fighter's special attributes
    const displaySpecialAttributes: HTMLDivElement = specialAttributes();
 
+   const chooseFighterButton = createButtonPrimary('Choose');
+   chooseFighterButton.classList.add('wizard-button');
+
    chooseFighterWrapper.append(
       chooseFighterTitle,
       chooseFighterStepper,
       chooseYourFighter,
       displayFightPoints,
       displaySpecialAttributes,
+      chooseFighterButton,
    );
 
    return chooseFighterWrapper;
