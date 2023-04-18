@@ -12,8 +12,10 @@ export const wizardScreen = (): HTMLDivElement => {
    const wizard = initWizard();
 
    const wizardButton = createButtonPrimary('Choose');
+   wizardButton.classList.add('wizard-button');
+
    const wizardBorderBottom = createBorderBottom();
 
-   wizardScreenWrapper.append(wizardBorderTop, wizard, wizardBorderBottom);
+   wizardScreenWrapper.append(wizardBorderTop, wizard, wizardButton, wizardBorderBottom);
    return wizardScreenWrapper;
 };
