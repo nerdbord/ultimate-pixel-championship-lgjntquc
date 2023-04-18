@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Roboto+Mono:wght@400;500;600&display=swap');
+
 @import '/src/screens/welcome-screen/welcome-screen.css';
 @import '/src/components/buttons/button-primary/button-primary.css';
 @import '/src/components/borders/border-bottom/boder-bottom.css';
@@ -24,4 +26,119 @@ body {
     color: white;
     font-size: 42px;
 }
+
+/* button-primary.css */
+
+.button-primary {
+    width: 260px;
+    height: 64px;
+    background: #da8b14;
+    border: solid #31251e;
+    border-width: 6px 24px;
+    font-family: 'Germania One';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #0f0f0f;
+    position: relative;
+ }
+ 
+ .button-primary::before,
+ .button-primary::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 12px;
+   height: 12px;
+   background: #da8b14;
+ }
+ 
+ .button-primary::before {
+   left: -17px;
+ }
+ 
+ .button-primary::after {
+   right: -17px;
+ }
+ 
+ .primary-square {
+     position: absolute;
+     top: 16%;
+     display: inline-block;
+     width: 12px;
+     height: 36px;
+     background: #da8b14;
+   }
+ 
+   .primary-square-1 {
+     left: -11px;
+   }
+ 
+   .primary-square-2 {
+     right: -11px;
+   }
+
+
+   /* border-top.css  Remember to update the URL after changing the location of the styles file */
+
+   .border-top {
+    background-image: url(./src/assets/images/borderTop.png);
+    width: 100%;
+    height: 32px;
+ }
+
+/* border-bottom.css Remember to update the URL after changing the location of the styles file */
+
+.border-bottom {
+    background-image: url(./src/assets/images/borderBottom.png); 
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    bottom: 0px;
+ }
+
+/* welcome-screen.css Remember to update the URL after changing the location of the styles file  */
+
+
+ .welcome-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+ }
+ 
+ .welcome-title {
+    font-family: 'Germania One';
+    font-size: 45px;
+    line-height: 42px;
+    text-align: center;
+    color: #ffffff;
+    margin: 145px 0 31px 0;
+ }
+ 
+ .welcome-title-bold {
+    color: #da8b14;
+    border-bottom: 4px dashed #da8b14;
+ }
+ 
+ .welcome-logo {
+    background-image: url(./src/assets/images/swords.png);
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+ }
+ 
+ .welcome-text {
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #efb55e;
+    margin-bottom: 60px;
+    padding: 0 40px;
+ }
+ 
 
