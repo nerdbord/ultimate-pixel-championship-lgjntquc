@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
    console.log('ts file');
 
    const app: HTMLElement | null = document.querySelector('#app');
-   if (app !== null) {
+   if (!!app) {
       const displayWelcomeScreen = welcomeScreen();
       const displayWizardScreen = wizardScreen();
       // Display welcome screen

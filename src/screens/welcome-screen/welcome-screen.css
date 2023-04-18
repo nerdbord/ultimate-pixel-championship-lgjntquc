@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Roboto+Mono:wght@400;500;600&display=swap');
+
 .welcome-wrapper {
    display: flex;
    flex-direction: column;
@@ -7,7 +9,7 @@
    position: relative;
 }
 
-.welcome-title {
+/* .welcome-title {
    font-family: 'Germania One';
    font-size: 45px;
    line-height: 42px;
@@ -19,7 +21,7 @@
 .welcome-title-bold {
    color: #da8b14;
    border-bottom: 4px dashed #da8b14;
-}
+} */
 
 .welcome-logo {
    background-image: url(../../assets/images/swords.png);

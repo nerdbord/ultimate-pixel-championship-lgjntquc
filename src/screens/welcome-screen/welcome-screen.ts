@@ -10,8 +10,11 @@ export const welcomeScreen = (): HTMLDivElement => {
 
    const welcomeTitle: HTMLHeadingElement = document.createElement('h1');
    welcomeTitle.classList.add('welcome-title');
-   welcomeTitle.innerHTML =
-      'Ultimate Pix <span class="welcome-title welcome-title-bold">Championships</span>';
+   welcomeTitle.innerText = 'Ultimate Pix';
+
+   const welcomeTitleSpan: HTMLSpanElement = document.createElement('span');
+   welcomeTitleSpan.classList.add('welcome-title-bold');
+   welcomeTitleSpan.innerText = 'Championships';
 
    const welcomeLogo: HTMLDivElement = document.createElement('div');
    welcomeLogo.classList.add('welcome-logo');
@@ -27,6 +30,7 @@ export const welcomeScreen = (): HTMLDivElement => {
    welcomeScreenWrapper.append(
       borderTop,
       welcomeTitle,
+      welcomeTitleSpan,
       welcomeLogo,
       welcomeText,
       welcomeButton,
