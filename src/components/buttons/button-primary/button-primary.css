@@ -1,0 +1,49 @@
+.button-primary {
+    width: 260px;
+    height: 64px;
+    background: #da8b14;
+    border: solid #31251e;
+    border-width: 6px 24px;
+    font-family: 'Germania One';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #0f0f0f;
+    position: relative;
+ }
+ 
+ .button-primary::before,
+ .button-primary::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 12px;
+   height: 12px;
+   background: #da8b14;
+ }
+ 
+ .button-primary::before {
+   left: -17px;
+ }
+ 
+ .button-primary::after {
+   right: -17px;
+ }
+ 
+ .primary-square {
+     position: absolute;
+     top: 16%;
+     display: inline-block;
+     width: 12px;
+     height: 36px;
+     background: #da8b14;
+   }
+ 
+   .primary-square-1 {
+     left: -11px;
+   }
+ 
+   .primary-square-2 {
+     right: -11px;
+   }
