@@ -1,4 +1,5 @@
 import { chosenFighter } from './displayChosenFighter.js';
+import { bookingForm } from './formInputs.js';
 
 export const bookingDetailsStep = () => {
    const bookingDetailsStepWrapper = document.createElement('div');
@@ -16,10 +17,13 @@ export const bookingDetailsStep = () => {
    //Creating elements to display chosen fighter
    const displayChosenFighter: HTMLDivElement = chosenFighter('Ivy Irene');
 
+   const bookingFormInputs: HTMLDivElement = bookingForm();
+
    bookingDetailsStepWrapper.append(
       bookingDetailsTitle,
       bookingDetailsStepper,
       displayChosenFighter,
+      bookingFormInputs,
    );
 
    return bookingDetailsStepWrapper;
