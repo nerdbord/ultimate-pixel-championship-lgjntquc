@@ -1,3 +1,6 @@
+import { successMessage } from './successMessage.js';
+import { createButtonPrimary } from '../../../components/buttons/button-primary/button-primary.js';
+
 export const bookingConfirmationStep = () => {
    const bookingConfirmationStepWrapper = document.createElement('div');
    bookingConfirmationStepWrapper.classList.add('screen-container');
@@ -11,6 +14,29 @@ export const bookingConfirmationStep = () => {
    const bookingConfirmationStepper: HTMLDivElement = document.createElement('div');
    bookingConfirmationStepper.classList.add('wizard-stepper-step3');
 
-   bookingConfirmationStepWrapper.append(bookingConfirmationTitle, bookingConfirmationStepper);
+   //Creating success message with Commandre name
+   const bookingSuccessMessage: HTMLDivElement = successMessage('COMMANDRENAME');
+
+   //Swords logo
+   const bookingConfirmationLogo: HTMLDivElement = document.createElement('div');
+   bookingConfirmationLogo.classList.add('booking-logo');
+
+   const bookingConfirmationText: HTMLParagraphElement = document.createElement('p');
+   bookingConfirmationText.classList.add('booking-confirmation-text');
+   bookingConfirmationText.innerText =
+      'You will be notified about the next steps in the championship process via email.';
+
+   const bookingConfirmationButton: HTMLButtonElement =
+      createButtonPrimary('Submit another fighter');
+
+   bookingConfirmationStepWrapper.append(
+      bookingConfirmationTitle,
+      bookingConfirmationStepper,
+      bookingSuccessMessage,
+      bookingConfirmationLogo,
+      bookingConfirmationText,
+      bookingConfirmationButton,
+   );
+
    return bookingConfirmationStepWrapper;
 };
