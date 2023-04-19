@@ -132,7 +132,7 @@ body {
 
 /* welcome-screen.css Remember to update the URL after changing the location of the styles file  */
 
-.container {
+.screen-container {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -195,10 +195,17 @@ body {
    margin-bottom: 30px;
 }
 
-.wizard-stepper-step1 {
+.wizard-stepper-step2 {
    width: 146px;
    height: 25px;
    background-image: url(./src/assets/images/stepperStep2.png);
+   margin-bottom: 30px;
+}
+
+.wizard-stepper-step3 {
+   width: 146px;
+   height: 25px;
+   background-image: url(./src/assets/images/stepperStep3.png);
    margin-bottom: 30px;
 }
 

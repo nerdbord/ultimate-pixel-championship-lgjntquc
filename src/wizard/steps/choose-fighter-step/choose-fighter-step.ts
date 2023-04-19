@@ -7,7 +7,7 @@ const fighter01 = './src/assets/images/fighter01.png';
 // Creating container for choose-fighter-step
 export const chooseFighterStep = (): HTMLDivElement => {
    const chooseFighterWrapper: HTMLDivElement = document.createElement('div');
-   chooseFighterWrapper.classList.add('container');
+   chooseFighterWrapper.classList.add('screen-container');
 
    //Creating the title of this screen
    const chooseFighterTitle: HTMLHeadingElement = document.createElement('h1');
