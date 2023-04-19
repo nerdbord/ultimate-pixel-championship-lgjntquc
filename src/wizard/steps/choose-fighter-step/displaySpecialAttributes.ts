@@ -9,7 +9,7 @@ export const specialAttributes = (specialAttack: string, weakness: string): HTML
    specialAttackLabel.innerText = 'SPECIAL ATTACK';
    const specialAttackValue: HTMLSpanElement = document.createElement('span');
    specialAttackValue.classList.add('wizard-attributes-value');
-   specialAttackValue.innerText = 'Passive Aggressiveness';
+   specialAttackValue.innerText = specialAttack;
 
    const weaknessLabel: HTMLSpanElement = document.createElement('span');
    weaknessLabel.classList.add('wizard-attributes-label');
@@ -17,7 +17,7 @@ export const specialAttributes = (specialAttack: string, weakness: string): HTML
    weaknessLabel.innerText = 'WEAKNESS';
    const weaknessValue: HTMLSpanElement = document.createElement('span');
    weaknessValue.classList.add('wizard-attributes-value');
-   weaknessValue.innerText = 'Logical thinking';
+   weaknessValue.innerText = weakness;
    displaySpecialAttributes.append(
       specialAttackLabel,
       specialAttackValue,
