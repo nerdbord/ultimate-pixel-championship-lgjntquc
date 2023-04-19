@@ -1,5 +1,6 @@
 import { chosenFighter } from './displayChosenFighter.js';
-import { bookingForm } from './formInputs.js';
+import { createForm } from './formInputs.js';
+import { createFormButtons } from './formButtons.js';
 
 export const bookingDetailsStep = () => {
    const bookingDetailsStepWrapper = document.createElement('div');
@@ -15,15 +16,18 @@ export const bookingDetailsStep = () => {
    bookingDetailsStepper.classList.add('wizard-stepper-step1');
 
    //Creating elements to display chosen fighter
-   const displayChosenFighter: HTMLDivElement = chosenFighter('Ivy Irene');
+   const bookingChosenFighter: HTMLDivElement = chosenFighter('Ivy Irene');
 
-   const bookingFormInputs: HTMLDivElement = bookingForm();
+   //Creating form
+   const bookingFormInputs: HTMLDivElement = createForm();
+   const bookingFormButtons: HTMLDivElement = createFormButtons();
 
    bookingDetailsStepWrapper.append(
       bookingDetailsTitle,
       bookingDetailsStepper,
-      displayChosenFighter,
+      bookingChosenFighter,
       bookingFormInputs,
+      bookingFormButtons,
    );
 
    return bookingDetailsStepWrapper;

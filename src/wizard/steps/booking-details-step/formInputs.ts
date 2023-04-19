@@ -1,5 +1,5 @@
 //Creating elements to display chosen fighter
-export const bookingForm = (): HTMLDivElement => {
+export const createForm = (): HTMLDivElement => {
    const formInputsWrapper: HTMLDivElement = document.createElement('div');
    formInputsWrapper.classList.add('booking-inputs-wrapper');
 
