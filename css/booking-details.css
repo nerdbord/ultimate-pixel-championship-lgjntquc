@@ -1,0 +1,78 @@
+.booking-fighter-wrapper {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-top: 40px;
+}
+
+.booking-fighter-label {
+   font-family: 'Roboto Mono';
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 16px;
+   letter-spacing: 0.03em;
+   color: #ffffff;
+   display: flex;
+}
+
+.booking-fighter-value {
+   font-family: 'Germania One';
+   font-weight: 400;
+   font-size: 30px;
+   line-height: 35px;
+   color: #ffffff;
+}
+
+.booking-inputs-wrapper {
+   display: flex;
+   flex-direction: column;
+   margin-top: 30px;
+}
+
+.booking-username-wrapper {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 30px;
+}
+
+.booking-email-wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.booking-username-label,
+.booking-email-label {
+   font-family: 'Roboto Mono';
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 16px;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: #ffffff;
+   margin-bottom: 4px;
+}
+
+.booking-username-input,
+.booking-email-input {
+   width: 255px;
+   height: 50px;
+   background: #2b1f1f;
+   border: 2px solid #31251e;
+   font-family: 'Germania One';
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 21px;
+   color: #ffffff;
+   padding-left: 10px;
+}
+
+.booking-buttons-wrapper {
+   display: flex;
+   flex-direction: column;
+   margin-top: 100px;
+}
+
+.booking-submit-button {
+   margin-bottom: 10px;
+}
