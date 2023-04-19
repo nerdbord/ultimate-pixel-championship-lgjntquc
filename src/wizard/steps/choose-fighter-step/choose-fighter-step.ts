@@ -22,6 +22,7 @@ const fighter01 = './src/assets/images/fighter01.png';
 // Creating container for choose-fighter-step
 export const chooseFighterStep = (): HTMLDivElement => {
    const fightersAmount = data.length;
+   index += 1;
 
    const chooseFighterWrapper: HTMLDivElement = document.createElement('div');
    chooseFighterWrapper.classList.add('container');

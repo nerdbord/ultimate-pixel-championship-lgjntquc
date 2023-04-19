@@ -15,7 +15,7 @@ const fighterData = [
       attackMax: 18,
       specialAttack: 'Fist Punch',
       weakness: 'Pink color',
-      imageUrl: '../assets/images/fighter02.png',
+      imageUrl: './src/assets/images/fighter02.png',
    },
    {
       name: 'Joanna Wick',
@@ -24,7 +24,7 @@ const fighterData = [
       attackMax: 24,
       specialAttack: 'Pencil Stab',
       weakness: 'Puppies',
-      imageUrl: '../assets/images/fighter03.png',
+      imageUrl: './src/assets/images/fighter03.png',
    },
    {
       name: 'Purple Pie',
@@ -33,7 +33,7 @@ const fighterData = [
       attackMax: 12,
       specialAttack: 'Roasting',
       weakness: 'Sunscreen',
-      imageUrl: '../src/assets/images/fighter04.png',
+      imageUrl: './src/assets/images/fighter04.png',
    },
    {
       name: 'Pale Lora',
@@ -42,7 +42,7 @@ const fighterData = [
       attackMax: 16,
       specialAttack: 'Bleach Splash',
       weakness: 'Candy Cotton',
-      imageUrl: '../assets/images/fighter05.png',
+      imageUrl: './src/assets/images/fighter05.png',
    },
    {
       name: 'Ivy Irene',
@@ -51,7 +51,7 @@ const fighterData = [
       attackMax: 14,
       specialAttack: 'Potion Pill',
       weakness: 'Broccoli',
-      imageUrl: '../assets/images/fighter06.png',
+      imageUrl: './src/assets/images/fighter06.png',
    },
 ];
 
