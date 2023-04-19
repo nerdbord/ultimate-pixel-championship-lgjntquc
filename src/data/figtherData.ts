@@ -1,0 +1,58 @@
+const fighterData = [
+   {
+      name: 'Annoyed Karen',
+      health: 67,
+      attackMin: 14,
+      attackMax: 18,
+      specialAttack: 'Passive Aggressiveness',
+      weakness: 'Logical thinking',
+      imageUrl: './src/assets/images/fighter01.png',
+   },
+   {
+      name: 'Mad Suzie',
+      health: 78,
+      attackMin: 12,
+      attackMax: 18,
+      specialAttack: 'Fist Punch',
+      weakness: 'Pink color',
+      imageUrl: '../assets/images/fighter02.png',
+   },
+   {
+      name: 'Joanna Wick',
+      health: 55,
+      attackMin: 22,
+      attackMax: 24,
+      specialAttack: 'Pencil Stab',
+      weakness: 'Puppies',
+      imageUrl: '../assets/images/fighter03.png',
+   },
+   {
+      name: 'Purple Pie',
+      health: 80,
+      attackMin: 9,
+      attackMax: 12,
+      specialAttack: 'Roasting',
+      weakness: 'Sunscreen',
+      imageUrl: '../src/assets/images/fighter04.png',
+   },
+   {
+      name: 'Pale Lora',
+      health: 60,
+      attackMin: 15,
+      attackMax: 16,
+      specialAttack: 'Bleach Splash',
+      weakness: 'Candy Cotton',
+      imageUrl: '../assets/images/fighter05.png',
+   },
+   {
+      name: 'Ivy Irene',
+      health: 70,
+      attackMin: 10,
+      attackMax: 14,
+      specialAttack: 'Potion Pill',
+      weakness: 'Broccoli',
+      imageUrl: '../assets/images/fighter06.png',
+   },
+];
+
+export default fighterData;
