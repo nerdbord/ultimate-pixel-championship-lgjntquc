@@ -117,4 +117,5 @@ export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement =>
    });
 
    return allFightersWrapper;
+
 };

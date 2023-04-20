@@ -4,7 +4,7 @@ import { createBorderBottom } from '../../components/borders/border-bottom/boder
 
 export const wizardScreen = (activeFighter: number): HTMLDivElement => {
    const wizardScreenWrapper = document.createElement('div');
-   wizardScreenWrapper.classList.add('container');
+   wizardScreenWrapper.classList.add('screen-container');
 
    const wizardBorderTop = createBorderTop();
 

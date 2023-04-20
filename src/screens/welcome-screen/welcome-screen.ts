@@ -4,7 +4,7 @@ import { createBorderTop } from '../../components/borders/border-top/border-top.
 
 export const welcomeScreen = (): HTMLDivElement => {
    const welcomeScreenWrapper: HTMLDivElement = document.createElement('div');
-   welcomeScreenWrapper.classList.add('container');
+   welcomeScreenWrapper.classList.add('screen-container');
 
    const borderTop: HTMLDivElement = createBorderTop();
 

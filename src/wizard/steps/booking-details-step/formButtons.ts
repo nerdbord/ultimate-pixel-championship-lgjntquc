@@ -5,12 +5,12 @@ export const createFormButtons = (): HTMLDivElement => {
    const bookingButtonsWrapper: HTMLDivElement = document.createElement('div');
    bookingButtonsWrapper.classList.add('booking-buttons-wrapper');
 
-   const bookingButtonSubmit = createButtonPrimary('Submit');
+   const bookingButtonSubmit: HTMLButtonElement = createButtonPrimary('Submit');
    bookingButtonSubmit.classList.add('primary-button');
    bookingButtonSubmit.classList.add('booking-submit-button');
    bookingButtonSubmit.type = 'submit';
 
-   const bookingBackButton = createButtonSecondary('Back');
+   const bookingBackButton: HTMLButtonElement = createButtonSecondary('Back');
    bookingBackButton.classList.add('primary-button');
    bookingBackButton.type = 'button';
 

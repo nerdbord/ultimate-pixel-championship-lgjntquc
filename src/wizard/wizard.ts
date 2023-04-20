@@ -11,7 +11,7 @@ export const initWizard = (activeFighter: number) => {
    ];
 
    // I need to monitor which step is active. You can change value to see how step changes. Try 2 for example.
-   const currentStepIndex = 0;
+   const currentStepIndex = 2;
 
    // I need to know max steps amount, to prevent going to far
    const maxSteps = steps.length;
