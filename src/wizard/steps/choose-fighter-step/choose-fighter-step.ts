@@ -22,50 +22,6 @@ export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement =>
    const allFightersWrapper: HTMLDivElement = document.createElement('div');
    const fightersAmount = data.length;
 
-   // let activeFighter = (activeFighterIndex:number): HTMLDivElement => {
-   //    const chooseFighterWrapper: HTMLDivElement = document.createElement('div');
-   //    chooseFighterWrapper.classList.add('container');
-   //
-   //    //Creating the title of this screen
-   //    const chooseFighterTitle: HTMLHeadingElement = document.createElement('h1');
-   //    chooseFighterTitle.classList.add('wizard-title');
-   //    chooseFighterTitle.innerText = 'Choose your fighter';
-   //
-   //    //NOTE: This stepper is temporary and will be properly implemented in the later stage of the project.
-   //    const chooseFighterStepper: HTMLDivElement = document.createElement('div');
-   //    chooseFighterStepper.classList.add('wizard-stepper-step1');
-   //
-   //    // Creating fighter selection elements: avatar, floor, name, and selection buttons.
-   //    const chooseYourFighter: HTMLDivElement = createFighter(activeFighterIndex, data[activeFighterIndex].name, data[activeFighterIndex].imageUrl);
-   //
-   //    //Creating elements to display Health and Attack
-   //    const displayFightPoints: HTMLDivElement = fightPoints(
-   //      data[activeFighterIndex].health,
-   //      data[activeFighterIndex].attackMin,
-   //      data[activeFighterIndex].attackMax,
-   //    );
-   //
-   //    // Creating elements to display fighter's special attributes
-   //    const displaySpecialAttributes: HTMLDivElement = specialAttributes(
-   //      data[activeFighterIndex].specialAttack,
-   //      data[activeFighterIndex].weakness,
-   //    );
-   //
-   //    const chooseFighterButton = createButtonPrimary('Choose');
-   //    chooseFighterButton.classList.add('wizard-button');
-   //
-   //    chooseFighterWrapper.append(
-   //      chooseFighterTitle,
-   //      chooseFighterStepper,
-   //      chooseYourFighter,
-   //      displayFightPoints,
-   //      displaySpecialAttributes,
-   //      chooseFighterButton,
-   //    );
-   //
-   //    return chooseFighterWrapper
-   // }
-
    data.forEach((fighter: IFighterData, index: number) => {
       const chooseSingleFighterWrapper: HTMLDivElement = document.createElement('div');
       chooseSingleFighterWrapper.classList.add('container');
@@ -82,6 +38,7 @@ export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement =>
       // Creating fighter selection elements: avatar, floor, name, and selection buttons.
       const chooseYourFighter: HTMLDivElement = createFighter(
          index,
+         fightersAmount,
          fighter.name,
          fighter.imageUrl,
       );
@@ -112,8 +69,6 @@ export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement =>
       );
 
       const handleSwipeRight = () => {
-         console.log('click right');
-
          if (activeFighterIndex < fightersAmount - 1) {
             activeFighterIndex += 1;
          }
@@ -122,8 +77,6 @@ export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement =>
       };
 
       const handleSwipeLeft = () => {
-         console.log('click left');
-
          if (activeFighterIndex > 0) {
             activeFighterIndex -= 1;
          }
@@ -147,10 +100,8 @@ export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement =>
 
       const updateView = (index: number) => {
          const fighterElements = allFightersWrapper.querySelectorAll('.container');
-         console.log('fighter elements', fighterElements);
          fighterElements.forEach((element, i) => {
             if (i === index) {
-               console.log('fighter element', element);
                element.classList.remove('inactive');
                element.classList.add('active');
             } else {

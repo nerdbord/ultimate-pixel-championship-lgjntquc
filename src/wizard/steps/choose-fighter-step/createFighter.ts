@@ -1,5 +1,10 @@
 // Creating fighter selection elements: avatar, floor, name, and selection buttons.
-export const createFighter = (index: number, name: string, avatarUrl: string): HTMLDivElement => {
+export const createFighter = (
+   index: number,
+   fightersAmount: number,
+   name: string,
+   avatarUrl: string,
+): HTMLDivElement => {
    const chooseFighterStep: HTMLDivElement = document.createElement('div');
    chooseFighterStep.classList.add('wizard-fighter-avatar');
    chooseFighterStep.style.backgroundImage = `url(${avatarUrl})`;
@@ -18,6 +23,14 @@ export const createFighter = (index: number, name: string, avatarUrl: string): H
    } else {
       SelectArrowLeft.classList.remove('show');
       SelectArrowLeft.classList.add('hide');
+   }
+
+   if (index === fightersAmount - 1) {
+      SelectArrowRight.classList.remove('show');
+      SelectArrowRight.classList.add('hide');
+   } else {
+      SelectArrowRight.classList.add('show');
+      SelectArrowRight.classList.remove('hide');
    }
 
    chooseFighterStep.append(FighterName, FighterFloor, SelectArrowLeft, SelectArrowRight);

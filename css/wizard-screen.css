@@ -77,6 +77,13 @@
    transform: rotate(180deg);
 }
 
+.show {
+   display: block;
+}
+
+.hide {
+   display: none;
+}
 
 .wizard-points-wrapper {
    display: flex;
