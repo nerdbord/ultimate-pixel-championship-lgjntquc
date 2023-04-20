@@ -3,7 +3,6 @@ import { wizardScreen } from './screens/wizard-screen/wizard-screen.js';
 import router from './ts/ui/router.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-   const activeFighter: number = 0;
    const app: HTMLElement | null = document.querySelector('#app');
    if (!!app) {
       const displayWelcomeScreen = welcomeScreen();
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       router.addRoute('/wizard', () => {
          while (app.firstChild) app.firstChild.remove();
-         app.append(wizardScreen(activeFighter));
+         app.append(wizardScreen());
       });
 
       const chooseButton = document.querySelector('.button-primary');

@@ -15,9 +15,10 @@ interface IFighterData {
 }
 
 const data: IFighterData[] = fighterData;
+let activeFighterIndex: number = 0;
 
 // Creating container for choose-fighter-step
-export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement => {
+export const chooseFighterStep = (): HTMLDivElement => {
    const allFightersWrapper: HTMLDivElement = document.createElement('div');
    const fightersAmount = data.length;
 
