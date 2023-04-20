@@ -4,7 +4,7 @@ import { createFormButtons } from './formButtons.js';
 
 export const bookingDetailsStep = () => {
    const bookingDetailsStepWrapper = document.createElement('div');
-   bookingDetailsStepWrapper.classList.add('container');
+   bookingDetailsStepWrapper.classList.add('screen-container');
 
    //Creating the title of this screen
    const bookingDetailsTitle: HTMLHeadingElement = document.createElement('h1');
@@ -13,7 +13,7 @@ export const bookingDetailsStep = () => {
 
    //NOTE: This stepper is temporary and will be properly implemented in the later stage of the project.
    const bookingDetailsStepper: HTMLDivElement = document.createElement('div');
-   bookingDetailsStepper.classList.add('wizard-stepper-step1');
+   bookingDetailsStepper.classList.add('wizard-stepper-step2');
 
    //Creating elements to display chosen fighter
    const bookingChosenFighter: HTMLDivElement = chosenFighter('Ivy Irene');

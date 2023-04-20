@@ -118,4 +118,5 @@ export const chooseFighterStep = (): HTMLDivElement => {
    });
 
    return allFightersWrapper;
+
 };

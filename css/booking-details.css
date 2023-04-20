@@ -76,3 +76,27 @@
 .booking-submit-button {
    margin-bottom: 10px;
 }
+
+.booking-message-wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: 'Germania One';
+   font-weight: 400;
+   font-size: 30px;
+   line-height: 35px;
+   text-align: center;
+   color: #ffffff;
+   padding: 20px 65px 55px 65px;
+}
+
+.booking-confirmation-text {
+   font-family: 'Roboto Mono';
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 16px;
+   text-align: center;
+   letter-spacing: 0.03em;
+   color: #ffffff;
+   padding: 40px 60px 50px 60px;
+}
