@@ -7,6 +7,15 @@
    margin: 30px 0 15px 0;
 }
 
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+
 .wizard-stepper-step1,
 .wizard-stepper-step2,
 .wizard-stepper-step3 {
@@ -56,7 +65,7 @@
    min-width: 180px;
 }
 
-.wizard-select-arrow {
+.wizard-select-arrow-right {
    position: absolute;
    top: 165px;
    right: -100px;
@@ -64,6 +73,25 @@
    height: 60px;
    border: none;
    background-image: url(../src/assets/icons/arrowIcon.svg);
+}
+
+.wizard-select-arrow-left {
+   position: absolute;
+   top: 165px;
+   right: 200px;
+   width: 60px;
+   height: 60px;
+   border: none;
+   background-image: url(../src/assets/icons/arrowIcon.svg);
+   transform: rotate(180deg);
+}
+
+.show {
+   display: block;
+}
+
+.hide {
+   display: none;
 }
 
 .wizard-points-wrapper {

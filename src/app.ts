@@ -1,17 +1,16 @@
 import { welcomeScreen } from './screens/welcome-screen/welcome-screen.js';
 import { wizardScreen } from './screens/wizard-screen/wizard-screen.js';
-import router from './ts/router.js';
+import router from './ts/ui/router.js';
 
 document.addEventListener('DOMContentLoaded', () => {
    const app: HTMLElement | null = document.querySelector('#app');
    if (!!app) {
       const displayWelcomeScreen = welcomeScreen();
-      const displayWizardScreen = wizardScreen();
       app.append(displayWelcomeScreen);
 
       router.addRoute('/wizard', () => {
          while (app.firstChild) app.firstChild.remove();
-         app.append(displayWizardScreen);
+         app.append(wizardScreen());
       });
 
       const chooseButton = document.querySelector('.button-primary');
