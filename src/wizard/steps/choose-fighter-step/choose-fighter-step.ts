@@ -3,7 +3,6 @@ import { fightPoints } from './displayFightPoints.js';
 import { specialAttributes } from './displaySpecialAttributes.js';
 import { createButtonPrimary } from '../../../components/buttons/button-primary/button-primary.js';
 import fighterData from '../../../ts/data/figtherData.js';
-import { updateActiveFighter } from '../../../ts/data/actions.js';
 
 interface IFighterData {
    name: string;
@@ -23,6 +22,19 @@ export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement =>
    const fightersAmount = data.length;
 
    data.forEach((fighter: IFighterData, index: number) => {
+      const handleSwipeRight = () => {
+         if (activeFighterIndex < fightersAmount - 1) {
+            activeFighterIndex += 1;
+         }
+         updateView(activeFighterIndex);
+      };
+
+      const handleSwipeLeft = () => {
+         if (activeFighterIndex > 0) {
+            activeFighterIndex -= 1;
+         }
+         updateView(activeFighterIndex);
+      };
       const chooseSingleFighterWrapper: HTMLDivElement = document.createElement('div');
       chooseSingleFighterWrapper.classList.add('container');
 
@@ -67,22 +79,6 @@ export const chooseFighterStep = (activeFighterIndex: number): HTMLDivElement =>
          displaySpecialAttributes,
          chooseFighterButton,
       );
-
-      const handleSwipeRight = () => {
-         if (activeFighterIndex < fightersAmount - 1) {
-            activeFighterIndex += 1;
-         }
-         const updatedActiveFighterIndex: number = updateActiveFighter(activeFighterIndex);
-         updateView(updatedActiveFighterIndex);
-      };
-
-      const handleSwipeLeft = () => {
-         if (activeFighterIndex > 0) {
-            activeFighterIndex -= 1;
-         }
-         const updatedActiveFighterIndex: number = updateActiveFighter(activeFighterIndex);
-         updateView(updatedActiveFighterIndex);
-      };
 
       const selectArrowRight = chooseSingleFighterWrapper.querySelector(
          '.wizard-select-arrow-right',
