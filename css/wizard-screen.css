@@ -56,7 +56,7 @@
    min-width: 180px;
 }
 
-.wizard-select-arrow {
+.wizard-select-arrow-right {
    position: absolute;
    top: 165px;
    right: -100px;
@@ -65,6 +65,18 @@
    border: none;
    background-image: url(../src/assets/icons/arrowIcon.svg);
 }
+
+.wizard-select-arrow-left {
+   position: absolute;
+   top: 165px;
+   right: 200px;
+   width: 60px;
+   height: 60px;
+   border: none;
+   background-image: url(../src/assets/icons/arrowIcon.svg);
+   transform: rotate(180deg);
+}
+
 
 .wizard-points-wrapper {
    display: flex;
