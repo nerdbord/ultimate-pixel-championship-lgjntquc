@@ -2,11 +2,15 @@ import { chooseFighterStep } from './steps/choose-fighter-step/choose-fighter-st
 import { bookingDetailsStep } from './steps/booking-details-step/booking-details-step.js';
 import { bookingConfirmationStep } from './steps/booking-confirmation-step/booking-confirmation-step.js';
 import { AppState } from '../ts/data/gameState.js';
+import { createStepper } from '../components/stepper/stepper.js';
 
 export const initWizard = (appState: AppState) => {
    const wizardWrapper = document.createElement('div');
 
+   const stepper = createStepper();
+
    wizardWrapper.append(
+      stepper,
       chooseFighterStep(appState),
       bookingDetailsStep(appState),
       bookingConfirmationStep(),
@@ -17,6 +21,15 @@ export const initWizard = (appState: AppState) => {
 
    const updateStateView = (index: number) => {
       const stateWrappers = wizardWrapper.querySelectorAll('.screen-container');
+      const stepper = wizardWrapper.querySelector('.wizard-stepper') as HTMLDivElement;
+      if (stepper) {
+         stepper.classList.remove(
+            'wizard-stepper-step1',
+            'wizard-stepper-step2',
+            'wizard-stepper-step3',
+         );
+         stepper.classList.add(`wizard-stepper-step${index + 1}`);
+      }
       stateWrappers.forEach((element, i) => {
          if (i === index) {
             element.classList.remove('inactive');

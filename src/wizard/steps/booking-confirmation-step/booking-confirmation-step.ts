@@ -1,5 +1,6 @@
 import { successMessage } from './successMessage.js';
 import { createButtonPrimary } from '../../../components/buttons/button-primary/button-primary.js';
+import { AppState } from '../../../ts/data/gameState.js';
 
 export const bookingConfirmationStep = () => {
    const bookingConfirmationStepWrapper = document.createElement('div');
@@ -9,10 +10,6 @@ export const bookingConfirmationStep = () => {
    const bookingConfirmationTitle: HTMLHeadingElement = document.createElement('h1');
    bookingConfirmationTitle.classList.add('wizard-title');
    bookingConfirmationTitle.innerText = 'Booking details';
-
-   //NOTE: This stepper is temporary and will be properly implemented in the later stage of the project.
-   const bookingConfirmationStepper: HTMLDivElement = document.createElement('div');
-   bookingConfirmationStepper.classList.add('wizard-stepper-step3');
 
    //Creating success message with Commander name
    const bookingSuccessMessage: HTMLDivElement = successMessage();
@@ -32,7 +29,6 @@ export const bookingConfirmationStep = () => {
 
    bookingConfirmationStepWrapper.append(
       bookingConfirmationTitle,
-      bookingConfirmationStepper,
       bookingSuccessMessage,
       bookingConfirmationLogo,
       bookingConfirmationText,

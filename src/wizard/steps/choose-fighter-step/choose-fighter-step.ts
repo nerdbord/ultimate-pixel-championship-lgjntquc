@@ -46,10 +46,6 @@ export const chooseFighterStep = (appState: AppState): HTMLDivElement => {
       chooseFighterTitle.classList.add('wizard-title');
       chooseFighterTitle.innerText = 'Choose your fighter';
 
-      //NOTE: This stepper is temporary and will be properly implemented in the later stage of the project.
-      const chooseFighterStepper: HTMLDivElement = document.createElement('div');
-      chooseFighterStepper.classList.add('wizard-stepper-step1');
-
       // Creating fighter selection elements: avatar, floor, name, and selection buttons.
       const chooseYourFighter: HTMLDivElement = createFighter(
          index,
@@ -80,7 +76,6 @@ export const chooseFighterStep = (appState: AppState): HTMLDivElement => {
 
       chooseSingleFighterWrapper.append(
          chooseFighterTitle,
-         chooseFighterStepper,
          chooseYourFighter,
          displayFightPoints,
          displaySpecialAttributes,
