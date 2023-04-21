@@ -17,7 +17,7 @@ export const bookingDetailsStep = (appState: AppState) => {
    bookingDetailsStepper.classList.add('wizard-stepper-step2');
 
    //Creating elements to display chosen fighter
-   const bookingChosenFighter: HTMLDivElement = chosenFighter(appState.fighterName);
+   const bookingChosenFighter: HTMLDivElement = chosenFighter();
 
    //Creating form
    const bookingFormInputs: HTMLDivElement = createForm();

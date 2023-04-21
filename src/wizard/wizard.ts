@@ -4,31 +4,17 @@ import { bookingConfirmationStep } from './steps/booking-confirmation-step/booki
 import { AppState } from '../ts/data/gameState.js';
 
 export const initWizard = (appState: AppState) => {
-   // I keep steps in the array, so Im able to navigate through
-   // const steps = [
-   //    chooseFighterStep(appState),
-   //    bookingDetailsStep(appState),
-   //    bookingConfirmationStep()
-   // ];
-
-   // I need to monitor which step is active. You can change value to see how step changes. Try 2 for example.
-   // const currentStepIndex = 0;
-
-   // I need to know max steps amount, to prevent going to far
-   // const maxSteps = steps.length;
-
    const wizardWrapper = document.createElement('div');
-
-   // I displaying only active step in my HTML
-   // wizardWrapper.append(steps[appState.currentStepIndex]);
 
    wizardWrapper.append(
       chooseFighterStep(appState),
-
-      // bookingConfirmationStep()
+      bookingDetailsStep(appState),
+      bookingConfirmationStep(),
    );
 
-   // Basically I used the same thing as for fighters
+   const chooseButtons = wizardWrapper.querySelectorAll('.button-primary');
+   const fighterNameValue = wizardWrapper.querySelector('.booking-fighter-value') as HTMLElement;
+
    const updateStateView = (index: number) => {
       const stateWrappers = wizardWrapper.querySelectorAll('.screen-container');
       stateWrappers.forEach((element, i) => {
@@ -42,20 +28,20 @@ export const initWizard = (appState: AppState) => {
       });
    };
 
-   const chooseButtons = wizardWrapper.querySelectorAll('.button-primary');
-
    chooseButtons.forEach((button) => {
       if (button.classList.contains('wizard-button')) {
          button.addEventListener('click', () => {
             appState.currentStepIndex += 1;
-            console.log(appState);
-            wizardWrapper.append(bookingDetailsStep(appState));
+            if (fighterNameValue) {
+               fighterNameValue.innerText = appState.fighterName;
+            }
             updateStateView(appState.currentStepIndex);
          });
       }
+      if (button.classList.contains('booking-submit-button')) {
+         button.addEventListener('click', () => {});
+      }
    });
-
-   console.log(chooseButtons);
 
    return wizardWrapper;
 };

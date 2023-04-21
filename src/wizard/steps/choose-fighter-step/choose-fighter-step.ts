@@ -3,9 +3,6 @@ import { fightPoints } from './displayFightPoints.js';
 import { specialAttributes } from './displaySpecialAttributes.js';
 import { createButtonPrimary } from '../../../components/buttons/button-primary/button-primary.js';
 import fighterData from '../../../ts/data/figtherData.js';
-import router from '../../../ts/ui/router.js';
-import { bookingDetailsStep } from '../booking-details-step/booking-details-step.js';
-// import { updateStateIndex } from "../../../ts/data/actions";
 import { AppState } from '../../../ts/data/gameState.js';
 
 interface IFighterData {
