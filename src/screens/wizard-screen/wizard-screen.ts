@@ -5,7 +5,7 @@ import { AppState } from '../../ts/data/gameState.js';
 
 export const wizardScreen = (appState: AppState): HTMLDivElement => {
    const wizardScreenWrapper = document.createElement('div');
-   wizardScreenWrapper.classList.add('screen-container');
+   wizardScreenWrapper.classList.add('app-container');
 
    const wizardBorderTop = createBorderTop();
 

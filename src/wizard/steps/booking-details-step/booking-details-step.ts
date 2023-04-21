@@ -5,7 +5,7 @@ import { AppState } from '../../../ts/data/gameState.js';
 
 export const bookingDetailsStep = (appState: AppState) => {
    const bookingDetailsStepWrapper = document.createElement('div');
-   bookingDetailsStepWrapper.classList.add('screen-container', 'active');
+   bookingDetailsStepWrapper.classList.add('screen-container', 'inactive');
 
    //Creating the title of this screen
    const bookingDetailsTitle: HTMLHeadingElement = document.createElement('h1');
