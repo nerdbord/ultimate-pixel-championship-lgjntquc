@@ -14,8 +14,8 @@ export const bookingConfirmationStep = () => {
    const bookingConfirmationStepper: HTMLDivElement = document.createElement('div');
    bookingConfirmationStepper.classList.add('wizard-stepper-step3');
 
-   //Creating success message with Commandre name
-   const bookingSuccessMessage: HTMLDivElement = successMessage('COMMANDRENAME');
+   //Creating success message with Commander name
+   const bookingSuccessMessage: HTMLDivElement = successMessage();
 
    //Swords logo
    const bookingConfirmationLogo: HTMLDivElement = document.createElement('div');
@@ -28,6 +28,7 @@ export const bookingConfirmationStep = () => {
 
    const bookingConfirmationButton: HTMLButtonElement =
       createButtonPrimary('Submit another fighter');
+   bookingConfirmationButton.classList.add('restart-submission-button');
 
    bookingConfirmationStepWrapper.append(
       bookingConfirmationTitle,

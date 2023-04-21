@@ -8,7 +8,6 @@ export const chosenFighter = (): HTMLDivElement => {
    chosenFighterLabel.innerText = 'CHOSEN FIGHTER';
    const chosenFighterValue: HTMLSpanElement = document.createElement('p');
    chosenFighterValue.classList.add('booking-fighter-value');
-   // chosenFighterValue.innerText = ;
 
    displayChosenFighter.append(chosenFighterLabel, chosenFighterValue);
    return displayChosenFighter;
