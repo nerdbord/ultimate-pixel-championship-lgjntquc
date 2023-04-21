@@ -6,8 +6,8 @@ import { createStepper } from '../components/stepper/stepper.js';
 
 export const initWizard = (appState: AppState) => {
    const wizardWrapper = document.createElement('div');
-
    const stepper = createStepper();
+   const stepperClasses = ['wizard-stepper-step1', 'wizard-stepper-step2', 'wizard-stepper-step3'];
 
    wizardWrapper.append(
       stepper,
@@ -23,11 +23,7 @@ export const initWizard = (appState: AppState) => {
       const stateWrappers = wizardWrapper.querySelectorAll('.screen-container');
       const stepper = wizardWrapper.querySelector('.wizard-stepper') as HTMLDivElement;
       if (stepper) {
-         stepper.classList.remove(
-            'wizard-stepper-step1',
-            'wizard-stepper-step2',
-            'wizard-stepper-step3',
-         );
+         stepper.classList.remove(...stepperClasses);
          stepper.classList.add(`wizard-stepper-step${index + 1}`);
       }
       stateWrappers.forEach((element, i) => {
