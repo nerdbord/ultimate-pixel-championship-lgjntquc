@@ -15,6 +15,7 @@ const router = {
 
    navigateTo(path: string): void {
       const route = this.routes.find((route) => route.path === path);
+      // window.history.pushState({}, '', path);
 
       if (route) {
          route.handler();
@@ -24,7 +25,7 @@ const router = {
       }
    },
 
-   navigateToWizard(): void {
+   navigateForward(): void {
       const currentIndex = this.routes.findIndex((route) => route.path === this.currentPath);
 
       const nextIndex = currentIndex + 1;

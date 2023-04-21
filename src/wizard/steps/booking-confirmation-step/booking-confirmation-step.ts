@@ -3,7 +3,7 @@ import { createButtonPrimary } from '../../../components/buttons/button-primary/
 
 export const bookingConfirmationStep = () => {
    const bookingConfirmationStepWrapper = document.createElement('div');
-   bookingConfirmationStepWrapper.classList.add('screen-container');
+   bookingConfirmationStepWrapper.classList.add('screen-container', 'inactive');
 
    //Creating the title of this screen
    const bookingConfirmationTitle: HTMLHeadingElement = document.createElement('h1');
