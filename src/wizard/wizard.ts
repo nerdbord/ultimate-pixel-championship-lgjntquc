@@ -38,8 +38,11 @@ export const initWizard = (appState: AppState) => {
             updateStateView(appState.currentStepIndex);
          });
       }
-      if (button.classList.contains('booking-submit-button')) {
-         button.addEventListener('click', () => {});
+      if (button.classList.contains('booking-back-button')) {
+         button.addEventListener('click', () => {
+            appState.currentStepIndex -= 1;
+            updateStateView(appState.currentStepIndex);
+         });
       }
    });
 
