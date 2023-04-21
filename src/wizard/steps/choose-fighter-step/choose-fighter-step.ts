@@ -2,7 +2,8 @@ import { createFighter } from './createFighter.js';
 import { fightPoints } from './displayFightPoints.js';
 import { specialAttributes } from './displaySpecialAttributes.js';
 import { createButtonPrimary } from '../../../components/buttons/button-primary/button-primary.js';
-import fighterData from '../../../data/figtherData.js';
+import fighterData from '../../../ts/data/figtherData.js';
+import { AppState } from '../../../ts/data/gameState.js';
 
 interface IFighterData {
    name: string;
@@ -18,8 +19,9 @@ const data: IFighterData[] = fighterData;
 let activeFighterIndex: number = 0;
 
 // Creating container for choose-fighter-step
-export const chooseFighterStep = (): HTMLDivElement => {
+export const chooseFighterStep = (appState: AppState): HTMLDivElement => {
    const allFightersWrapper: HTMLDivElement = document.createElement('div');
+   allFightersWrapper.classList.add('screen-container', 'active');
    const fightersAmount = data.length;
 
    data.forEach((fighter: IFighterData, index: number) => {
@@ -72,6 +74,10 @@ export const chooseFighterStep = (): HTMLDivElement => {
       const chooseFighterButton = createButtonPrimary('Choose');
       chooseFighterButton.classList.add('wizard-button');
 
+      chooseFighterButton.addEventListener('click', () => {
+         appState.fighterName = data[activeFighterIndex].name;
+      });
+
       chooseSingleFighterWrapper.append(
          chooseFighterTitle,
          chooseFighterStepper,
@@ -118,5 +124,4 @@ export const chooseFighterStep = (): HTMLDivElement => {
    });
 
    return allFightersWrapper;
-
 };

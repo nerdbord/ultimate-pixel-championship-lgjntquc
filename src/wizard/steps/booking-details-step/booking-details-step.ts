@@ -1,10 +1,11 @@
 import { chosenFighter } from './displayChosenFighter.js';
 import { createForm } from './formInputs.js';
 import { createFormButtons } from './formButtons.js';
+import { AppState } from '../../../ts/data/gameState.js';
 
-export const bookingDetailsStep = () => {
+export const bookingDetailsStep = (appState: AppState) => {
    const bookingDetailsStepWrapper = document.createElement('div');
-   bookingDetailsStepWrapper.classList.add('screen-container');
+   bookingDetailsStepWrapper.classList.add('screen-container', 'active');
 
    //Creating the title of this screen
    const bookingDetailsTitle: HTMLHeadingElement = document.createElement('h1');
@@ -16,7 +17,7 @@ export const bookingDetailsStep = () => {
    bookingDetailsStepper.classList.add('wizard-stepper-step2');
 
    //Creating elements to display chosen fighter
-   const bookingChosenFighter: HTMLDivElement = chosenFighter('Ivy Irene');
+   const bookingChosenFighter: HTMLDivElement = chosenFighter();
 
    //Creating form
    const bookingFormInputs: HTMLDivElement = createForm();
