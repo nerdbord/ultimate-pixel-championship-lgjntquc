@@ -44,6 +44,36 @@ export const initWizard = (appState: AppState) => {
             updateStateView(appState.currentStepIndex);
          });
       }
+      if (button.classList.contains('booking-submit-button')) {
+         button.addEventListener('click', () => {
+            appState.currentStepIndex += 1;
+            const playerName = wizardWrapper.querySelector(
+               '.booking-username-input',
+            ) as HTMLInputElement;
+            const playerEmail = wizardWrapper.querySelector(
+               '.booking-email-input',
+            ) as HTMLInputElement;
+            const commanderName = wizardWrapper.querySelector(
+               '.booking-commander-name',
+            ) as HTMLElement;
+
+            appState.playerName = playerName.value;
+            appState.playerEmail = playerEmail.value;
+            commanderName.innerText = appState.playerName;
+            playerName.value = '';
+            playerEmail.value = '';
+            updateStateView(appState.currentStepIndex);
+         });
+      }
+      if (button.classList.contains('restart-submission-button')) {
+         button.addEventListener('click', () => {
+            appState.currentStepIndex = 0;
+            appState.fighterName = '';
+            appState.playerName = '';
+            appState.playerEmail = '';
+            updateStateView(appState.currentStepIndex);
+         });
+      }
    });
 
    return wizardWrapper;
