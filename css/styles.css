@@ -28,7 +28,8 @@ body {
    font-size: 42px;
 }
 
-.screen-container {
+.screen-container,
+.app-container {
    display: flex;
    flex-direction: column;
    align-items: center;
