@@ -12,10 +12,6 @@ export const bookingDetailsStep = (appState: AppState) => {
    bookingDetailsTitle.classList.add('wizard-title');
    bookingDetailsTitle.innerText = 'Booking details';
 
-   //NOTE: This stepper is temporary and will be properly implemented in the later stage of the project.
-   const bookingDetailsStepper: HTMLDivElement = document.createElement('div');
-   bookingDetailsStepper.classList.add('wizard-stepper-step2');
-
    //Creating elements to display chosen fighter
    const bookingChosenFighter: HTMLDivElement = chosenFighter();
 
@@ -25,7 +21,6 @@ export const bookingDetailsStep = (appState: AppState) => {
 
    bookingDetailsStepWrapper.append(
       bookingDetailsTitle,
-      bookingDetailsStepper,
       bookingChosenFighter,
       bookingFormInputs,
       bookingFormButtons,
