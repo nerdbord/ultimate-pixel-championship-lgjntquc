@@ -11,7 +11,7 @@ export const createFormButtons = (): HTMLDivElement => {
    bookingButtonSubmit.type = 'submit';
 
    const bookingBackButton: HTMLButtonElement = createButtonSecondary('Back');
-   bookingBackButton.classList.add('primary-button');
+   bookingBackButton.classList.add('primary-button', 'booking-back-button');
    bookingBackButton.type = 'button';
 
    bookingButtonsWrapper.append(bookingButtonSubmit, bookingBackButton);
