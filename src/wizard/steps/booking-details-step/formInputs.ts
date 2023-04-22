@@ -4,6 +4,7 @@ export const createForm = (): HTMLDivElement => {
    formInputsWrapper.classList.add('booking-inputs-wrapper');
 
    const form: HTMLFormElement = document.createElement('form');
+   form.setAttribute('id', 'huja');
 
    const formUsernameWrapper: HTMLDivElement = document.createElement('div');
    formUsernameWrapper.classList.add('booking-username-wrapper');
@@ -24,10 +25,13 @@ export const createForm = (): HTMLDivElement => {
    const formEmailInput: HTMLInputElement = document.createElement('input');
    formEmailInput.classList.add('booking-email-input');
    formEmailInput.placeholder = 'Your email';
+   const formEmailError: HTMLParagraphElement = document.createElement('p');
+   formEmailError.classList.add('email-error-message');
+   formEmailError.innerText = 'Enter the correct email address';
 
    formEmailWrapper.append(formEmailLabel, formEmailInput);
 
-   form.append(formUsernameWrapper, formEmailWrapper);
+   form.append(formUsernameWrapper, formEmailWrapper, formEmailError);
    formInputsWrapper.append(form);
    return formInputsWrapper;
 };
