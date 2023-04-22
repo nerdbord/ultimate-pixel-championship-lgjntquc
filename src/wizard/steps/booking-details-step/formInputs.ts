@@ -4,7 +4,6 @@ export const createForm = (): HTMLDivElement => {
    formInputsWrapper.classList.add('booking-inputs-wrapper');
 
    const form: HTMLFormElement = document.createElement('form');
-   form.setAttribute('id', 'huja');
 
    const formUsernameWrapper: HTMLDivElement = document.createElement('div');
    formUsernameWrapper.classList.add('booking-username-wrapper');
