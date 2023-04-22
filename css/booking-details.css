@@ -67,6 +67,21 @@
    padding-left: 10px;
 }
 
+.email-error-border {
+   border: 2px solid #f73939;
+}
+
+.email-error-message {
+   font-family: 'Roboto Mono';
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 16px;
+   letter-spacing: 0.03em;
+   color: #f73939;
+   margin-top: 5px;
+   display: none;
+}
+
 .booking-buttons-wrapper {
    display: flex;
    flex-direction: column;

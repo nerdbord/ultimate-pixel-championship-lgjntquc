@@ -54,23 +54,26 @@ export const initWizard = (appState: AppState) => {
          });
       }
       if (button.classList.contains('booking-submit-button')) {
-         button.addEventListener('click', () => {
-            appState.currentStepIndex += 1;
+         button.addEventListener('click', (e) => {
             const playerName = wizardWrapper.querySelector(
                '.booking-username-input',
             ) as HTMLInputElement;
             const playerEmail = wizardWrapper.querySelector(
                '.booking-email-input',
             ) as HTMLInputElement;
-            const commanderName = wizardWrapper.querySelector(
-               '.booking-commander-name',
-            ) as HTMLElement;
+            const emailRegex = /\S+@\S+\.\S+/;
+            const errorMessage = wizardWrapper.querySelector('.email-error-message');
 
-            appState.playerName = playerName.value;
+            if (!playerName.value || !playerEmail.value || !emailRegex.test(playerEmail.value)) {
+               e.preventDefault();
+               errorMessage?.classList.add('active');
+               playerEmail.classList.add('email-error-border');
+            } else appState.playerName = playerName.value;
             appState.playerEmail = playerEmail.value;
-            commanderName.innerText = appState.playerName;
             playerName.value = '';
             playerEmail.value = '';
+            errorMessage?.classList.remove('active');
+            playerEmail.classList.remove('email-error-border');
             updateStateView(appState.currentStepIndex);
          });
       }
