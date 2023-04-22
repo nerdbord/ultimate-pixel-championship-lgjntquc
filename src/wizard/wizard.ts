@@ -63,18 +63,25 @@ export const initWizard = (appState: AppState) => {
             ) as HTMLInputElement;
             const emailRegex = /\S+@\S+\.\S+/;
             const errorMessage = wizardWrapper.querySelector('.email-error-message');
+            const commanderName = wizardWrapper.querySelector(
+               '.booking-commander-name',
+            ) as HTMLElement;
 
             if (!playerName.value || !playerEmail.value || !emailRegex.test(playerEmail.value)) {
                e.preventDefault();
                errorMessage?.classList.add('active');
                playerEmail.classList.add('email-error-border');
-            } else appState.playerName = playerName.value;
-            appState.playerEmail = playerEmail.value;
-            playerName.value = '';
-            playerEmail.value = '';
-            errorMessage?.classList.remove('active');
-            playerEmail.classList.remove('email-error-border');
-            updateStateView(appState.currentStepIndex);
+            } else {
+               appState.playerName = playerName.value;
+               appState.playerEmail = playerEmail.value;
+               playerName.value = '';
+               playerEmail.value = '';
+               errorMessage?.classList.remove('active');
+               playerEmail.classList.remove('email-error-border');
+               commanderName.innerText = `${appState.playerName}!`;
+               appState.currentStepIndex += 1;
+               updateStateView(appState.currentStepIndex);
+            }
          });
       }
       if (button.classList.contains('restart-submission-button')) {
