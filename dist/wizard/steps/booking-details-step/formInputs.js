@@ -1,0 +1,30 @@
+//Creating elements to display chosen fighter
+export const createForm = () => {
+   const formInputsWrapper = document.createElement('div');
+   formInputsWrapper.classList.add('booking-inputs-wrapper');
+   const form = document.createElement('form');
+   const formUsernameWrapper = document.createElement('div');
+   formUsernameWrapper.classList.add('booking-username-wrapper');
+   const formUsernameLabel = document.createElement('label');
+   formUsernameLabel.classList.add('booking-username-label');
+   formUsernameLabel.innerText = 'COMMANDER';
+   const formUsernameInput = document.createElement('input');
+   formUsernameInput.classList.add('booking-username-input');
+   formUsernameInput.placeholder = 'Your name';
+   formUsernameWrapper.append(formUsernameLabel, formUsernameInput);
+   const formEmailWrapper = document.createElement('div');
+   formEmailWrapper.classList.add('booking-email-wrapper');
+   const formEmailLabel = document.createElement('label');
+   formEmailLabel.classList.add('booking-email-label');
+   formEmailLabel.innerText = 'EMAIL';
+   const formEmailInput = document.createElement('input');
+   formEmailInput.classList.add('booking-email-input');
+   formEmailInput.placeholder = 'Your email';
+   const formEmailError = document.createElement('p');
+   formEmailError.classList.add('email-error-message');
+   formEmailError.innerText = 'Enter the correct email address';
+   formEmailWrapper.append(formEmailLabel, formEmailInput);
+   form.append(formUsernameWrapper, formEmailWrapper, formEmailError);
+   formInputsWrapper.append(form);
+   return formInputsWrapper;
+};

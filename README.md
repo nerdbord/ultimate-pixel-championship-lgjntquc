@@ -30,3 +30,11 @@ Using HTML won't be approved.
 - User should be able to choose preferred fighter
 - User should be able to pass his contact details
 - User should be able to submit his detailsUser should be able to navigate through three steps
+
+### Deployment 🚀
+
+You can find a live demo of this project <a href="https://nerdbord.github.io/ultimate-pixel-championship-lgjntquc/">here</a>.
+
+### Get in touch
+
+If you have any questions or feedback, please don't hesitate to contact us!
