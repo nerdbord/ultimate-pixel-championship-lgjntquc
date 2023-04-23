@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.0",
     "prettier": "^2.8.7",
     "typescript": "^5.0.4"
@@ -7,8 +8,8 @@
   "scripts": {
     "start": "tsc --watch",
     "build": "rm -rf dist && tsc -b",
-    "prepare": "husky install"
-
+    "prepare": "husky install",
+    "deploy": "gh-pages -d dist"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
